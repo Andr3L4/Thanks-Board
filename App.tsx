@@ -97,16 +97,16 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen text-white font-sans flex flex-col items-center">
-      <header className="text-center py-12 px-4 flex-shrink-0">
+      <header className="text-center pt-12 pb-6 px-4 flex-shrink-0">
         <h1 className="text-6xl font-extrabold text-white tracking-tight" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.2)' }}>
            Ecrã dos Agradecimentos
         </h1>
         <p className="mt-4 text-lg text-white/90 max-w-2xl mx-auto" style={{ textShadow: '0 1px 5px rgba(0,0,0,0.2)' }}>
-         Agradece á pessoa que te deu Apoio no teu Projeto sem ela saber😉
+         Agradece à pessoa que te deu apoio no teu projeto, sem ela saber 😉
         </p>
       </header>
 
-      <main className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12">
         {messages.length > 0 ? (
            <div className="flex flex-wrap justify-center items-start gap-8">
             {messages.map((message) => (
