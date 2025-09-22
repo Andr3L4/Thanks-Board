@@ -3,4 +3,5 @@ export interface ThankYouMessage {
   text: string;
   rotation: number;
   createdAt: number;
+  color: string;
 }
