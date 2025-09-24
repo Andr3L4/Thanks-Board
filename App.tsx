@@ -96,28 +96,28 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen text-white font-sans flex flex-col items-center">
-      <header className="text-center pt-12 pb-6 px-4 flex-shrink-0">
-        <h1 className="text-6xl font-extrabold text-white tracking-tight" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.2)' }}>
+    <div className="min-h-screen text-black font-sans flex flex-col items-center">
+      <header className="text-center w-full pt-8 sm:pt-12 pb-4 sm:pb-6 px-4 flex-shrink-0">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black tracking-tight" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
            Ecrã dos Agradecimentos
         </h1>
-        <p className="mt-4 text-lg text-white/90 max-w-2xl mx-auto" style={{ textShadow: '0 1px 5px rgba(0,0,0,0.2)' }}>
+        <p className="mt-3 sm:mt-4 text-base sm:text-lg text-black/80 max-w-2xl mx-auto" style={{ textShadow: '0 1px 5px rgba(0,0,0,0.1)' }}>
          Agradece à pessoa que te deu apoio no teu projeto, sem ela saber 😉
         </p>
       </header>
 
-      <main className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12">
+      <main className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-8 sm:pb-12">
         {messages.length > 0 ? (
-           <div className="flex flex-wrap justify-center items-start gap-8">
+           <div className="flex flex-wrap justify-center items-start gap-4 md:gap-8">
             {messages.map((message) => (
               <ThankYouCard key={message.id} message={message} />
             ))}
           </div>
         ) : (
           <div className="flex items-center justify-center h-full pt-16">
-            <div className="text-center text-slate-300 p-8 bg-slate-800/50 rounded-lg border border-slate-700">
-              <p className="text-2xl font-bold">The wall is empty.</p>
-              <p className="mt-2">Be the first to share your gratitude by clicking the '+' button!</p>
+            <div className="text-center text-[#FEF200] p-8 bg-black/80 rounded-lg shadow-lg">
+              <p className="text-2xl font-bold">O mural está vazio.</p>
+              <p className="mt-2">Sê o primeiro a partilhar a tua gratidão clicando no botão '+'!</p>
             </div>
           </div>
         )}
