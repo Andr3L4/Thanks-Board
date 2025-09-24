@@ -19,11 +19,11 @@ const AllMessagesModal: React.FC<AllMessagesModalProps> = ({ isOpen, onClose, me
       onClick={onClose}
     >
       <div
-        className="bg-black border-2 border-yellow-300 rounded-lg shadow-xl p-6 sm:p-8 w-full max-w-2xl transform transition-all flex flex-col"
+        className="bg-black border-2 border-[#FEF200] rounded-lg shadow-xl p-6 sm:p-8 w-full max-w-2xl transform transition-all flex flex-col"
         onClick={(e) => e.stopPropagation()}
         style={{ maxHeight: '90vh' }}
       >
-        <h2 className="text-2xl font-bold text-yellow-300 mb-4 flex-shrink-0">All Messages</h2>
+        <h2 className="text-2xl font-bold text-[#FEF200] mb-4 flex-shrink-0">All Messages</h2>
         <p className="text-gray-300 mb-6 flex-shrink-0">
           {messages.length > 0
             ? `Here are all the messages from the last 7 days.`
@@ -51,7 +51,7 @@ const AllMessagesModal: React.FC<AllMessagesModalProps> = ({ isOpen, onClose, me
           <button
             type="button"
             onClick={onClose}
-            className="px-6 py-2 rounded-md bg-yellow-300 hover:bg-yellow-400 text-black font-bold transition-colors"
+            className="px-6 py-2 rounded-md bg-[#FEF200] hover:bg-[#E5D900] text-black font-bold transition-colors"
           >
             Close
           </button>

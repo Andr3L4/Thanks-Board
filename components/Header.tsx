@@ -16,13 +16,13 @@ const Header: React.FC<HeaderProps> = ({ onAddClick, onViewClick }) => {
       <nav className="flex items-center gap-2 sm:gap-4">
         <button
           onClick={onViewClick}
-          className="font-semibold text-white hover:text-yellow-300 transition-colors px-3 py-2 text-sm sm:text-base"
+          className="font-semibold text-white hover:text-[#FEF200] transition-colors px-3 py-2 text-sm sm:text-base"
         >
           View All
         </button>
         <button
           onClick={onAddClick}
-          className="bg-yellow-300 text-black font-bold px-4 py-2 rounded-lg hover:bg-yellow-400 transition-colors text-sm sm:text-base"
+          className="bg-[#FEF200] text-black font-bold px-4 py-2 rounded-lg hover:bg-[#E5D900] transition-colors text-sm sm:text-base"
         >
           Add Gratitude
         </button>

@@ -90,7 +90,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-yellow-300 text-black font-sans flex flex-col">
+    <div className="min-h-screen bg-[#FEF200] text-black font-sans flex flex-col">
       <Header 
         onAddClick={() => setIsAddModalOpen(true)}
         onViewClick={() => setIsAllMessagesModalOpen(true)}

@@ -72,7 +72,7 @@ const SuggestionComponent: React.FC<SuggestionComponentProps> = ({ onUseSuggesti
             <button
               type="button"
               onClick={handleUseSuggestion}
-              className="px-4 py-1.5 rounded-lg bg-yellow-300 hover:bg-yellow-400 text-black text-sm font-bold transition-colors"
+              className="px-4 py-1.5 rounded-lg bg-[#FEF200] hover:bg-[#E5D900] text-black text-sm font-bold transition-colors"
             >
               Use this
             </button>
