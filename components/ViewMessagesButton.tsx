@@ -8,7 +8,7 @@ const ViewMessagesButton: React.FC<ViewMessagesButtonProps> = ({ onClick }) => {
   return (
     <button
       onClick={onClick}
-      className="fixed bottom-4 left-4 sm:bottom-8 sm:left-8 bg-[#FEF200] hover:bg-yellow-400 text-black font-bold w-14 h-14 sm:w-16 sm:h-16 rounded-full shadow-lg flex items-center justify-center transition-all transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-yellow-300 focus:ring-opacity-50 border-2 border-black/50"
+      className="fixed bottom-4 left-4 sm:bottom-8 sm:left-8 bg-gray-700 hover:bg-gray-800 text-white font-bold w-14 h-14 sm:w-16 sm:h-16 rounded-full shadow-lg flex items-center justify-center transition-all transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-gray-400"
       aria-label="View all messages"
     >
       <svg

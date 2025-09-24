@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import SuggestionComponent from './SuggestionComponent';
 
 interface AddMessageModalProps {
   isOpen: boolean;
@@ -26,40 +27,44 @@ const AddMessageModal: React.FC<AddMessageModalProps> = ({ isOpen, onClose, onAd
 
   return (
     <div 
-      className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-2 sm:p-4"
+      className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
       onClick={onClose}
     >
       <div
-        className="bg-[#FEF200] rounded-xl shadow-2xl p-6 sm:p-8 w-full max-w-lg transform transition-all border border-black/50"
+        className="bg-black border-2 border-yellow-300 rounded-lg shadow-xl p-6 sm:p-8 w-full max-w-md transform transition-all"
         onClick={(e) => e.stopPropagation()}
       >
-        <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4">Partilha a tua gratidão</h2>
-        <p className="text-sm sm:text-base text-black/80 mb-4 sm:mb-6">A tua mensagem será publicada anonimamente. Pelo que estás grato hoje?</p>
+        <h2 className="text-2xl font-bold text-yellow-300 mb-4">Add a message of gratitude</h2>
+        <p className="text-gray-300 mb-6">Your message will be posted anonymously to the wall for others to see.</p>
         <form onSubmit={handleSubmit}>
           <textarea
             value={text}
             onChange={(e) => setText(e.target.value)}
-            className="w-full h-40 p-4 bg-white text-black rounded-lg border border-black/30 focus:outline-none focus:ring-2 focus:ring-black resize-none placeholder-gray-500"
-            placeholder="Escreve aqui a tua nota de agradecimento..."
+            className="w-full h-36 p-3 bg-gray-900 text-gray-200 rounded-md border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-300 resize-none placeholder-gray-500"
+            placeholder="Write your thank you note here..."
             maxLength={280}
             required
+            autoFocus
           />
-          <div className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 mt-6">
-             <span className="text-sm text-black/70 mr-auto">{text.length} / 280</span>
-            <button
-              type="button"
-              onClick={onClose}
-              className="px-6 py-2 rounded-lg bg-black/10 hover:bg-black/20 text-black font-semibold transition-colors"
-            >
-              Cancelar
-            </button>
-            <button
-              type="submit"
-              className="px-6 py-2 rounded-lg bg-[#FEF200] hover:bg-yellow-400 text-black font-bold transition-colors disabled:opacity-50 disabled:cursor-not-allowed border border-black"
-              disabled={!text.trim()}
-            >
-              Publicar Anonimamente
-            </button>
+           <SuggestionComponent onUseSuggestion={setText} />
+          <div className="flex items-center justify-between mt-4">
+            <span className="text-sm text-gray-400">{text.length} / 280</span>
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={onClose}
+                className="px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 text-white font-semibold transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                className="px-4 py-2 rounded-md bg-yellow-300 hover:bg-yellow-400 text-black font-bold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={!text.trim()}
+              >
+                Post Anonymously
+              </button>
+            </div>
           </div>
         </form>
       </div>
