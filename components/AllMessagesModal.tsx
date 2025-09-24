@@ -36,7 +36,7 @@ const AllMessagesModal: React.FC<AllMessagesModalProps> = ({ isOpen, onClose, me
               <p className="text-gray-200 break-words flex-1">{msg.text}</p>
               <button
                 onClick={() => onDeleteMessage(msg.id)}
-                className="opacity-50 hover:opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity text-gray-500 hover:text-red-500 flex-shrink-0 p-1"
+                className="opacity-50 hover:opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity text-gray-500 hover:text-red-500 flex-shrink-0 p-1"
                 aria-label="Delete message"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">

@@ -8,7 +8,7 @@ interface ThankYouCardProps {
 const ThankYouCard: React.FC<ThankYouCardProps> = ({ message }) => {
   return (
     <div
-      className="p-5 rounded-md shadow-lg transform bg-black text-[#FEF200] border-2 border-[#FEF200] w-64 h-64 flex flex-col justify-center transition-transform duration-200 hover:scale-105 hover:shadow-xl"
+      className="p-5 rounded-md shadow-lg transform bg-black text-[#FEF200] border-2 border-[#FEF200] w-full sm:w-64 h-64 md:w-60 md:h-60 flex flex-col justify-center transition-transform duration-200 hover:scale-105 hover:shadow-xl"
       style={{
         transform: `rotate(${message.rotation}deg)`,
       }}

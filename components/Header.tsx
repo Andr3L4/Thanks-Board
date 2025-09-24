@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from './Logo';
 
 interface HeaderProps {
   onAddClick: () => void;
@@ -9,9 +10,7 @@ const Header: React.FC<HeaderProps> = ({ onAddClick, onViewClick }) => {
   return (
     <header className="bg-black text-white p-4 shadow-lg w-full flex justify-between items-center sticky top-0 z-10">
       <div className="flex items-center">
-        <div className="font-display text-3xl bg-white text-black w-10 h-10 flex items-center justify-center font-bold">
-          G
-        </div>
+        <Logo />
       </div>
       <nav className="flex items-center gap-2 sm:gap-4">
         <button

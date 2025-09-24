@@ -96,19 +96,19 @@ const App: React.FC = () => {
         onViewClick={() => setIsAllMessagesModalOpen(true)}
       />
       
-      <main className="flex-grow flex flex-col lg:flex-row p-4 sm:p-6 md:p-8 lg:p-12 gap-8">
-        <div className="lg:w-1/2 flex flex-col justify-center text-center lg:text-left">
-           <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display leading-none">
+      <main className="flex-grow flex flex-col p-6 md:p-8 lg:p-10 gap-8">
+        <div className="text-center">
+           <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-display leading-none">
             WALL OF <br/>GRATITUDE
           </h1>
-          <p className="mt-4 text-lg max-w-xl mx-auto lg:mx-0">
+          <p className="mt-4 text-lg max-w-2xl mx-auto">
             An anonymous space to share and read messages of gratitude. Brighten someone's day by leaving a kind note on the wall.
           </p>
         </div>
 
-        <div className="lg:w-1/2 flex-grow min-h-[50vh] lg:min-h-0 lg:max-h-[calc(100vh-150px)] overflow-y-auto pr-2">
+        <div className="flex-grow min-h-[50vh]">
            {messages.length > 0 ? (
-            <div className="flex flex-wrap justify-center lg:justify-start items-start gap-4 md:gap-6">
+            <div className="flex flex-wrap justify-center items-start gap-4 md:gap-6">
               {messages.map((message) => (
                 <ThankYouCard key={message.id} message={message} />
               ))}
